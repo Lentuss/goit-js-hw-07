@@ -17,6 +17,16 @@ gallery.insertAdjacentHTML('afterbegin', galleryItem);
 
 createGallery();
 
+const handleClick = (e) => {
+    e.preventDefault();
+
+    if (e.target.nodeName !== "IMG") {
+        return;
+    }
+}
+gallery.addEventListener("click", handleClick);
+
+
 let galleryLight = new SimpleLightbox('.gallery a', {
     captions: true,
     captionsData: 'alt',
