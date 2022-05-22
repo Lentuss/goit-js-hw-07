@@ -5,11 +5,11 @@ const gallery = document.querySelector(".gallery");
 const createGallery = () => {
     galleryItems.map(({ preview, original, description }) => {
 
-    const galleryItem = `<div class="gallery__unit">
+    const galleryItem = `<li class="gallery__unit">
   <a class="gallery__item" href="${original}">
   <img class="gallery__image" src="${preview}" alt="${description}" />
 </a>
-</div>`
+</li>`
         
 gallery.insertAdjacentHTML('afterbegin', galleryItem);
     })
